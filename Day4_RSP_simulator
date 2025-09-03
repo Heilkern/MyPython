@@ -1,0 +1,53 @@
+import random
+Rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+Scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+Paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+player = int(input("what do you choose? Type 0 for Rock, 1 for Scissor, 2 for Paper."))
+if player == 0:
+    print(Rock)
+elif player == 1:
+    print(Scissors)
+elif player == 2:
+    print(Paper)
+else:
+    print("Please input valid data.")
+
+rand_comp = random.randint(0,2)
+if rand_comp == 0:
+    print(Rock)
+elif rand_comp == 1:
+    print(Scissors)
+else:
+    print(Paper)
+
+if player == rand_comp:
+    print("Draw")
+elif player == 0 and rand_comp == 1:
+    print("player wins")
+elif player == 1 and rand_comp == 2:
+    print("player wins")
+elif player == 2 and rand_comp == 0:
+    print("player wins")
+else:
+    print("player lose")
