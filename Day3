@@ -1,0 +1,24 @@
+print("greetings")
+print("Large is $21, Medium is $18, Small is $15.")
+size = (input("What size pizza do you want? (L/M/S)"))
+pepperoni = input("Do you want pepperoni? it takes $4. (Y/N): ")
+extra_chesse = input("Do you want extra chesse? it takes $3. (Y/N): ")
+bills = 0
+
+if size == "L":
+    bills = 21
+elif size == "M":
+    bills = 18
+elif size == "S":
+    bills = 15
+else:
+    print("Please enter a valid size.")
+if pepperoni == "Y":
+    if size == "S":
+        bills += 3
+    else:
+        bills += 4
+if extra_chesse == "Y":
+    bills += 3
+
+print(f"your total bill is ${bills}.")
