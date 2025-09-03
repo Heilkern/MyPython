@@ -1,20 +1,31 @@
 import random
 
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'A', 'B', 'C', 'D', 'E', 'F', 'G']
 numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
-passwd = []
+passwd = ""
 print("This is PyPW Generator.")
 nr_letters = int(input("How many letters do you have? \n"))
 nr_symbols = int(input("How many symbols do you have? \n"))
 nr_numbers = int(input("How many numbers do you have? \n"))
 
-for nr_letter in range(1, nr_letters + 1):
-    print(random.choice(letters))
+for char in range(0, nr_letters):
+    rand_char = random.choice(letters)
+    passwd += rand_char
 print()
-for nr_symbol in range(1, nr_symbols + 1):
-    print(random.choice(symbols))
+for symbol in range(0, nr_symbols):
+    rand_symbol = random.choice(symbols)
+    passwd += rand_symbol
 print()
-for nr_number in range(1, nr_numbers + 1):
-    print(random.choice(symbols))
+for numb in range(0, nr_numbers):
+    rand_numb = random.choice(numbers)
+    passwd += rand_numb
 print()
+
+print(passwd)
+passwd = list(passwd)
+random.shuffle(passwd)
+print(passwd)
+print()
+rand_pw = "".join(passwd)
+print("Your random password is:", rand_pw)
