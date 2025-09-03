@@ -1,0 +1,43 @@
+import random
+
+
+friends = ["Alice", "Bob", "Charlie", "David", "Eve", "Fred"]
+# first try
+random_friends = random.choice(friends)
+print(random_friends)
+print()
+
+# second try
+random.shuffle(friends)
+# rand_num = random.randint(0, 5)
+rand_num = random.randint(0, len(friends)-1)
+print(friends)
+print(rand_num)
+print(friends[rand_num])
+
+# third try
+rand_rand = random.random() * 100
+index_num = 0
+if 0 <= rand_rand < 20:
+    index_num = 0
+elif 20 <= rand_rand < 40:
+    index_num = 1
+elif 40 <= rand_rand < 60:
+    index_num = 2
+elif 60 <= rand_rand < 80:
+    index_num = 3
+elif 80 <= rand_rand < 100:
+    index_num = 4
+print(round(rand_rand, 1))
+print(friends[index_num])
+print(len(friends))
+
+fruits = ["apple", "banana", "cherry", "orange"]
+vegetable = ["Spinach", "Kale", "Tomatoes", "Celery"]
+
+dirty_dozen = [fruits, vegetable]
+print(dirty_dozen[0])
+print(dirty_dozen[1])
+print(dirty_dozen[0][3])
+print(dirty_dozen[1][2])
+# print(dirty_dozen[row(행)][column(열)]) 구조로 이해하면 된다.
