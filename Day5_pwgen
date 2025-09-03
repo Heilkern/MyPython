@@ -3,18 +3,18 @@ import random
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
-
+passwd = []
 print("This is PyPW Generator.")
 nr_letters = int(input("How many letters do you have? \n"))
 nr_symbols = int(input("How many symbols do you have? \n"))
 nr_numbers = int(input("How many numbers do you have? \n"))
 
-for nr_letter in range(nr_letters):
-    print(letters[nr_letter])
+for nr_letter in range(1, nr_letters + 1):
+    print(random.choice(letters))
 print()
-for nr_symbol in range(nr_symbols):
-    print(symbols[nr_symbol])
+for nr_symbol in range(1, nr_symbols + 1):
+    print(random.choice(symbols))
 print()
-for nr_number in range(nr_numbers):
-    print(numbers[nr_number])
+for nr_number in range(1, nr_numbers + 1):
+    print(random.choice(symbols))
 print()
