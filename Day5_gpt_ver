@@ -1,0 +1,30 @@
+import random
+
+# 사용할 문자 풀(pool) 정의
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g',
+           'A', 'B', 'C', 'D', 'E', 'F', 'G']
+numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+
+# 문자 풀을 하나의 리스트로 합침
+all_chars = letters + numbers + symbols
+
+print("This is PyPW Generator.")
+
+# 사용자에게 비밀번호 길이 입력 받음
+pw_length = int(input("How long should your password be? \n"))
+
+# 비밀번호 후보를 담을 리스트
+passwd = []
+
+# 입력받은 길이만큼 랜덤하게 문자 선택
+for _ in range(pw_length):
+    passwd.append(random.choice(all_chars))
+
+# 리스트 섞기 (순서 랜덤화)
+random.shuffle(passwd)
+
+# 리스트를 문자열로 변환
+rand_pw = "".join(passwd)
+
+print("Your random password is:", rand_pw)
