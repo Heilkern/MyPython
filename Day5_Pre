@@ -3,20 +3,22 @@ vegetables = ["Cabbage", "Carrot", "Celery"]
 edibles = [fruits[0], fruits[1], fruits[2], vegetables]
 
 print("Print vegetables's item with <for edible in edibles>")
+print()
 
 # [-1]을 사용한 출력
 for edible in edibles[-1]:
     print(edible)
+print()
+
+# if isinstance(edible, list): 리스트일 경우로 한정
+for edible in edibles:
+    if isinstance(edible, list):
+        for item in edible:
+            print(f'{item} pie')
+print()
 
 # *을 사용한 출력
 edibles = [fruits[0], fruits[1], fruits[2], *vegetables]
 print(edibles)
 for edible in edibles[3:]:
-    print(edible)
-
-# if isinstance(edible, list): 리스트일 경우로 한정
-
-for edible in edibles:
-    if isinstance(edible, list):
-        for item in edible:
-            print(item)
+    print(f'{edible} pie')
